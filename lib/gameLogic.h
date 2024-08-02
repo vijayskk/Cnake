@@ -131,7 +131,7 @@ void spawnFruit(){
     {
         fy = rand() % (HEIGHT-1 + 1 - 1) + 1;
         fx = rand() % (WIDTH + 1 - 1) + 1;
-        if (checkTrail(fx,fy) != 1 && fx != 0 && fy != 0 && fy < HEIGHT && fx < WIDTH)
+        if (checkTrail(fx,fy) != 1 && fx != 0 && fy != 0 && fy < HEIGHT-1 && fx < WIDTH-1)
         {
             break;
         }
