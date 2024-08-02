@@ -3,14 +3,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int score = 999;
-
+int score = 0;
+int restart = 0;
 struct Frame{
     char framedata[HEIGHT][WIDTH];
 };
 
-void setScore(int s){
-    score = s;
+void setScore(){
+    score++;
 }
 
 int render(struct Frame * frame){
@@ -40,4 +40,32 @@ int render(struct Frame * frame){
     sprintf(buffer,"\x1b[%d;1H\nSCORE: %d",HEIGHT,score);
     write(STDOUT_FILENO, buffer , 20);
     return 0;
+}
+
+void gameOver(){
+    write(STDOUT_FILENO, "\x1b[2J", 4);
+    char * buffer = malloc(sizeof(char) * 5);
+    sprintf(buffer,"\x1b[%d;%dH\nGame Over...",HEIGHT/2,WIDTH/2);
+    write(STDOUT_FILENO, buffer , 30);
+    sprintf(buffer,"                            ");
+    sprintf(buffer,"\x1b[%d;%dHSCORE: %d",(HEIGHT/2) + 2,WIDTH/2,score);
+    write(STDOUT_FILENO, buffer , 30);
+    sprintf(buffer,"                            ");
+    sprintf(buffer,"\x1b[%d;%dHPress R to retry X to quit",(HEIGHT/2) + 3,WIDTH/2);
+    write(STDOUT_FILENO, buffer , 50);
+
+    while(1){
+        char ch = '\0';
+        read(STDIN_FILENO, &ch, 1);
+
+        if (ch == 'x')
+        {
+            exit(0);
+        }
+        if (ch == 'r'){
+            score = 0;
+            restart = 1;
+            break;
+        }
+    }
 }

@@ -1,0 +1,42 @@
+Date : 2024-08-03 01:26:45
+Directory : /Users/vijaysatheesh/C Projects/Cnake
+Total : 11 files,  346 codes, 11 comments, 48 blanks, all 405 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| C++      |          6 |        253 |          9 |         29 |        291 |
+| C        |          2 |         67 |          2 |         12 |         81 |
+| Markdown |          2 |         16 |          0 |          3 |         19 |
+| Makefile |          1 |         10 |          0 |          4 |         14 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                        | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                           |         11 |        346 |         11 |         48 |        405 |
+| . (Files)                                                   |          2 |         10 |          0 |          5 |         15 |
+| docs                                                        |          1 |         16 |          0 |          2 |         18 |
+| lib                                                         |          7 |        290 |          9 |         35 |        334 |
+| src                                                         |          1 |         30 |          2 |          6 |         38 |
++-------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                    | language | code       | comment    | blank      | total      |
++-------------------------------------------------------------+----------+------------+------------+------------+------------+
+| /Users/vijaysatheesh/C Projects/Cnake/Makefile              | Makefile |         10 |          0 |          4 |         14 |
+| /Users/vijaysatheesh/C Projects/Cnake/README.md             | Markdown |          0 |          0 |          1 |          1 |
+| /Users/vijaysatheesh/C Projects/Cnake/docs/TODO.md          | Markdown |         16 |          0 |          2 |         18 |
+| /Users/vijaysatheesh/C Projects/Cnake/lib/clk.h             | C++      |          8 |          3 |          3 |         14 |
+| /Users/vijaysatheesh/C Projects/Cnake/lib/defenitions.h     | C++      |          6 |          0 |          4 |         10 |
+| /Users/vijaysatheesh/C Projects/Cnake/lib/enableRaw.h       | C++      |         24 |          0 |          4 |         28 |
+| /Users/vijaysatheesh/C Projects/Cnake/lib/engine.c          | C        |         37 |          0 |          6 |         43 |
+| /Users/vijaysatheesh/C Projects/Cnake/lib/gameLogic.h       | C++      |        157 |          6 |         12 |        175 |
+| /Users/vijaysatheesh/C Projects/Cnake/lib/input.h           | C++      |         16 |          0 |          3 |         19 |
+| /Users/vijaysatheesh/C Projects/Cnake/lib/setupPlayGround.h | C++      |         42 |          0 |          3 |         45 |
+| /Users/vijaysatheesh/C Projects/Cnake/src/main.c            | C        |         30 |          2 |          6 |         38 |
+| Total                                                       |          |        346 |         11 |         48 |        405 |
++-------------------------------------------------------------+----------+------------+------------+------------+------------+
