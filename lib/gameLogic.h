@@ -17,12 +17,12 @@ struct Snake
 };
 struct Snake *snake;
 struct Frame *frame;
-
+int trail[100][2];
 void drawWalls()
 {
     frame = (struct Frame *)malloc(sizeof(struct Frame));
     snake = (struct Snake *)malloc(sizeof(struct Snake));
-    snake->len = 1;
+    snake->len = 3;
     snake->x = (int)(WIDTH / 2);
     snake->y = (int)(HEIGHT / 2);
     snake->dir = UP;
@@ -42,6 +42,24 @@ void drawWalls()
 
 void drawSnake()
 {
+    //frame->framedata[snake->y][snake->x] = ' ';
+    frame->framedata[trail[snake->len-1][1]][trail[snake->len-1][0]] = ' ';
+
+        trail[0][0] = snake->x;
+        trail[0][1] = snake->y;
+        int j;    
+
+        
+        for(j = snake->len; j > 0; j--){    
+            trail[j][1] = trail[j-1][1];
+            trail[j][0] = trail[j-1][0];    
+        }    
+
+    
+    
+
+    
+
     int inp = takeInput();
     controlSnake(inp);
     if (snake->dir == UP && snake->y > 0)
