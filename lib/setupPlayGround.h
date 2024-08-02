@@ -24,7 +24,7 @@ int validatePlayGround()
   int row, col;
   getWindowSize(&row, &col);
   char buf[50];
-  if (row < MINHEIGHT || col < MINWIDTH)
+  if (row < HEIGHT || col < WIDTH)
   {
       sprintf(buf, "Cannot Play game\nResize the window and run again.");
       write(STDOUT_FILENO, buf, strlen(buf));

@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "setupplayground.h": "c"
+        "setupplayground.h": "c",
+        "gamelogic.h": "c"
     }
 }
