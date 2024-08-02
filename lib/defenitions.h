@@ -1,0 +1,9 @@
+#define MINWIDTH 20
+#define MINHEIGHT 20
+
+
+#define ARROWUPKEY 38
+#define ARROWDOWNKEY 38
+#define ARROWLEFTKEY 38
+#define ARROWRIGHTKEY 38
+

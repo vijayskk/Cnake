@@ -1,0 +1,17 @@
+- Setup the playground
+    - Window size grabing DONEs
+    - Disabling canonical mode DONE
+    - Testing inputs
+
+- Draw the level
+    - Walls
+    - Check for space is available
+- Taking input
+    - Handling input
+- Draw hero snake
+    - Building the snake logic (impossible)
+    - Building the collision system ( Godly )
+    - Making the snake move ( better die )
+- Draw the fruits
+    - Score system
+    - Fruit spawner
