@@ -4,6 +4,7 @@
 #include <stdlib.h>
 
 int score = 0;
+int highscore = 0;
 int restart = 0;
 struct Frame{
     char framedata[HEIGHT][WIDTH];
@@ -39,6 +40,9 @@ int render(struct Frame * frame){
     char * buffer = malloc(sizeof(char) * 5);
     sprintf(buffer,"\x1b[%d;1H\nSCORE: %d",HEIGHT,score);
     write(STDOUT_FILENO, buffer , 20);
+    sprintf(buffer,"                            ");
+    sprintf(buffer,"\x1b[%d;1H\nHIGH: %d",HEIGHT+1,highscore);
+    write(STDOUT_FILENO, buffer , 20);
     return 0;
 }
 
@@ -63,7 +67,12 @@ void gameOver(){
             exit(0);
         }
         if (ch == 'r'){
+            if (score>highscore)
+            {
+                highscore = score;
+            }
             score = 0;
+            
             restart = 1;
             break;
         }

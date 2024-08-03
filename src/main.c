@@ -12,6 +12,7 @@ int hold = 0;
 
 int main()
 {
+    label:
     enableRawMode();
     setup(&hold);
 
@@ -30,7 +31,7 @@ int main()
         
     }
     restart = 0;
-    main();
+    goto label;
 
     return 0;
 }
