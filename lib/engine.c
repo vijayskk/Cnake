@@ -49,13 +49,18 @@ int render(struct Frame * frame){
 void gameOver(){
     write(STDOUT_FILENO, "\x1b[2J", 4);
     char * buffer = malloc(sizeof(char) * 5);
+    if (score > highscore)
+    {
+        sprintf(buffer,"\x1b[%d;%dH\nNEW HIGH SCORE!!!!",(HEIGHT/2) -2 ,WIDTH/2);
+        write(STDOUT_FILENO, buffer , 30);
+    }
     sprintf(buffer,"\x1b[%d;%dH\nGame Over...",HEIGHT/2,WIDTH/2);
     write(STDOUT_FILENO, buffer , 30);
     sprintf(buffer,"                            ");
-    sprintf(buffer,"\x1b[%d;%dHSCORE: %d",(HEIGHT/2) + 2,WIDTH/2,score);
+    sprintf(buffer,"\x1b[%d;%dHSCORE: %d",(HEIGHT/2) + 3,WIDTH/2,score);
     write(STDOUT_FILENO, buffer , 30);
     sprintf(buffer,"                            ");
-    sprintf(buffer,"\x1b[%d;%dHPress R to retry X to quit",(HEIGHT/2) + 3,WIDTH/2);
+    sprintf(buffer,"\x1b[%d;%dHPress R to retry X to quit",(HEIGHT/2) + 5,WIDTH/2);
     write(STDOUT_FILENO, buffer , 50);
 
     while(1){
